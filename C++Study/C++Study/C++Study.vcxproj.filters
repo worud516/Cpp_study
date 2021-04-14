@@ -15,8 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="academy_review_0413.cpp">
+    <ClCompile Include="academy_review_0414_Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="academy_review_0414_Swap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_task_0414.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="academy_review_0414_Header.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

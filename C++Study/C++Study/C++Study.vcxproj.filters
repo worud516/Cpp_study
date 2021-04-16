@@ -27,6 +27,9 @@
     <ClCompile Include="academy_review_0415_difference.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="academy_review_0416_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="academy_review_0414_Header.h">

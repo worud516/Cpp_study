@@ -30,10 +30,19 @@
     <ClCompile Include="academy_review_0416_class.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EmployeeManagement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EmployeeManagement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="academy_review_0414_Header.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

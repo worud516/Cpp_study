@@ -1,2 +1,3 @@
-﻿  staticVariable.cpp
+﻿  academy_task_0421_Goblin.cpp
+D:\C++\C++Study\C++Study\academy_task_0421_Goblin.cpp(8,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   C++Study.vcxproj -> D:\C++\C++Study\Debug\C++Study.exe

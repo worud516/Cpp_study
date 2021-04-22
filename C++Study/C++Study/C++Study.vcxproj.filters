@@ -33,19 +33,34 @@
     <ClCompile Include="EmployeeManagement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inheritance.cpp">
+    <ClCompile Include="academy_task_0421_Goblin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="class.cpp">
+    <ClCompile Include="academy_review_0422_overloading2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Constructors.cpp">
+    <ClCompile Include="academy_review_0422_overloading3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="constant.cpp">
+    <ClCompile Include="academy_review_0422_overriding.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="staticVariable.cpp">
+    <ClCompile Include="my_study_0421_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_study_0421_constant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_study_0421_Constructors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_study_0421_Inheritance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_study_0421_overloading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_study_0421_staticVariable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -54,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="academy_review_0414_Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="academy_task_0421_Goblin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

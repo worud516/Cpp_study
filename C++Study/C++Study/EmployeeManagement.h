@@ -6,10 +6,6 @@
 #include <cmath>
 
 
-#define _CRT_SECURE_NO_WARNINGS
-#include <cstdio> 
-#include <cstring>
-#include <cstdlib>
 
 int number_counter = 1;
 

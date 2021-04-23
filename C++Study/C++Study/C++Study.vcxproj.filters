@@ -63,6 +63,12 @@
     <ClCompile Include="my_study_0421_staticVariable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="academy_review_0423_vitual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_review_0423_Enumeration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EmployeeManagement.h">
@@ -72,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="academy_task_0421_Goblin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vlrtual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -72,6 +72,9 @@
     <ClCompile Include="my_study_0424_getter_setter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="my_study_0423_inheritance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EmployeeManagement.h">

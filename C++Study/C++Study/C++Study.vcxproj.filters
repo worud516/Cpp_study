@@ -30,12 +30,6 @@
     <ClCompile Include="academy_review_0416_class.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EmployeeManagement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="academy_task_0421_Goblin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="academy_review_0422_overloading2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -63,9 +57,6 @@
     <ClCompile Include="my_study_0421_staticVariable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="academy_review_0423_vitual.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="academy_review_0423_Enumeration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -75,18 +66,36 @@
     <ClCompile Include="my_study_0423_inheritance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="academy_review_0423_vitualFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_task_0421.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_task_EmployeeManagement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_review_0426_EnumerationSwitch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_task_Tetris.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EmployeeManagement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="academy_review_0414_Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="academy_task_0421_Goblin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vlrtual.h">
+    <ClInclude Include="my_task_Tetris.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="my_task_EmployeeManagement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="my_task_Tetris_2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

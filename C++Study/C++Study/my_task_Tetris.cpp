@@ -10,6 +10,12 @@ int main() {
 
 	float prev = (float)clock() / CLOCKS_PER_SEC;
 
+	Display* display = new Display;
+	GameEngine* gameengine = new GameEngine();
+
+
+	showConsoleCursor(false);
+
 
 	while (true) {
 		float curr = (float)clock() / CLOCKS_PER_SEC;
@@ -18,7 +24,7 @@ int main() {
 		if (dt < INTERVAL) continue;
 		prev = curr;
 
-		printf("%.3f\n", curr);
+		// printf("%.3f\n", curr);
 
 
 		bool left = keyState('a');
@@ -28,10 +34,21 @@ int main() {
 		else {
 			// 그냥 블록 떨어지게
 		}
+
+		gameengine->next(dt, 0);
+
+
 		// 화면 출력
+		gameengine->makeDisplayData();
+		display->draw();
+		
 		// 게임상태 판별
-		bool right = keyState('d');
+
+
+
+		// bool right = keyState('d');
 	}
+
 
 
 	return 0;

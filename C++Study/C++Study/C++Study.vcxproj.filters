@@ -99,6 +99,9 @@
     <ClCompile Include="my_study_0429_template_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="my_study_0429_friend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="academy_review_0414_Header.h">

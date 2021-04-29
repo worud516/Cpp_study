@@ -1,2 +1,17 @@
-﻿  my_task_Tetris.cpp
+﻿  my_study_0429_template_2.cpp
+D:\C++\C++Study\C++Study\my_study_0429_template_2.cpp(8,12): warning C4244: '=': conversion from 'T2' to 'T1', possible loss of data
+          with
+          [
+              T2=double
+          ]
+          and
+          [
+              T1=int
+          ]
+D:\C++\C++Study\C++Study\my_study_0429_template_2.cpp(27): message : see reference to function template instantiation 'T1 myMin<int,double>(T1,T2)' being compiled
+          with
+          [
+              T1=int,
+              T2=double
+          ]
   C++Study.vcxproj -> D:\C++\C++Study\Debug\C++Study.exe

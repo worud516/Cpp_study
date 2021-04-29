@@ -12,9 +12,7 @@
 #define GRID_HEIGHT 10
 #define USERBLOCK_SIZE 3
 
-// 배열은 x,y가 반대이다 이유는 뒤에서부터 채워지기 때문에
 int displayData[GRID_HEIGHT][GRID_WIDTH] = { 0, };
-
 
 class Display {
 public:
@@ -32,61 +30,114 @@ public:
 	}
 };
 
-// 위의 Display와 밑의 Display와 같은 코드임
-
-//class Display {
-//public:
-//	void draw() {
-//		for (int i = 0; i < GRID_HEIGHT; i++) {
-//			for (int k = 0; k < GRID_WIDTH; k++) {
-//				drawPosition(k, i, displayData[i][k] == 1);
-//			}
-//		}
-//	}
-//};
-
-
-
-
 class GameEngine {
 public:
-	int gameGridData[GRID_HEIGHT][GRID_WIDTH] = { 0, };
-	int userBlock[USERBLOCK_SIZE][USERBLOCK_SIZE] = { 
-		{1,1,1},
-		{0,0,1},
-		{0,0,1}
+	int gameGridData[GRID_HEIGHT][GRID_WIDTH] = {
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0},
 	};
-	int blockX = 0;
+	int userBlock[USERBLOCK_SIZE][USERBLOCK_SIZE] = {
+		{1, 1, 1},
+		{0, 0, 1},
+		{0, 0, 1}
+	};
+	int blockX = 0;      //유저블록의 현재 위치를 기억할 변수
 	int blockY = 0;
 
+	float elapsed = 0.0f;
+
 	void init() {
-		// 최초에 게임엔진을 초기화 하는 과정
+		//최초에 게임 엔진을 초기화 하는 과정을 맡는다.
 	}
-
 	void next(float dt, char keyboardInput) {
-		// 키보드 입력값을 받아와서 어떤 일을 할지 결정(while 루프에서 매번 불려진다.)
-		blockY++;
+		//blockY++;
+		elapsed = elapsed + dt;      //elapsed += dt; 
+		if (elapsed >= 0.5f) {
+			if (canGoDown()) {
+				blockY++;
+			}
+			else {// 더 내려갈수 없으면 userBlock을 gameGridData에 전사
+				trans();
+			}
+			elapsed = elapsed - 0.5f;   //elapsed -= dt; 
+		}
 	}
 
-	void makeDisplayData() {	// 실제 게임 데이터를 화면에 출력할 수 있는 데이터로 바꿔준다.
+	//블록이 아래로 내려갈 수 있냐
+	bool canGoDown() {
+		for (int i = 0; i < USERBLOCK_SIZE; i++) {
+			for (int k = 0; k < USERBLOCK_SIZE; k++) {
+				if (userBlock[i][k] == 1 && i + blockY + 1 >= GRID_HEIGHT)
+					return false;
+				if (userBlock[i][k] == 1 && gameGridData[i + blockY + 1][k + blockX] == 1)
+					return false;
+			}
+		}
+		return true;
+	}
+
+	//블록이 왼쪽으로 갈 수 있냐
+	bool canGoLeft() {
+		return true;
+	}
+	//블록이 오른쪽으로 갈 수 있냐
+	bool canGoRight() {
+		return true;
+	}
+
+	void trans() {
+		for (int i = 0; i < USERBLOCK_SIZE; i++) {
+			for (int k = 0; k < USERBLOCK_SIZE; k++) {
+				gameGridData[i + blockY][k + blockX] = userBlock[i][k] == 1 ? userBlock[i][k] : gameGridData[i + blockY][k + blockX];
+			}
+		}
+		// todo:한 줄이 가득 차 있는지 확인
+
+		// 새로운 블록 생성
+		makeUserBlock();
+	}
+
+
+	void makeUserBlock() {
+		blockX = 0;
+		blockY = 0;
+
+		// todo: 랜덤을 통해서 새로운 블록을 만든다.
+	}
+
+
+	//실제 게임 데이터를 화면에 출력할 수 있는 데이터로 바꿔주는 함수
+	void makeDisplayData() {
 		for (int i = 0; i < GRID_HEIGHT; i++) {
-			for (int k = 0; i < GRID_WIDTH; k++) {
+			for (int k = 0; k < GRID_WIDTH; k++) {
 				displayData[i][k] = gameGridData[i][k];
 			}
 		}
+
 		for (int i = 0; i < USERBLOCK_SIZE; i++) {
 			for (int k = 0; k < USERBLOCK_SIZE; k++) {
 				if (i + blockY < 0 || i + blockY > GRID_HEIGHT) {
-					// do nothing
+					//DO NOTHING
 				}
 				else if (k + blockX < 0 || k + blockX > GRID_WIDTH) {
-					// do nothing
+					//DO NOTHING
 				}
-				else { //todo : 
-					displayData[i + blockY][k + blockX] = userBlock[i][k];
+				else {
+					///displayData[i + blockY][k + blockX] = userBlock[i][k] == 1 ? userBlock[i][k] : displayData[i + blockY][k+ blockX];
+					int _x = k + blockX;
+					int _y = i + blockY;
+
+					displayData[_y][_x] = userBlock[i][k] | displayData[_y][_x];
 				}
 			}
 		}
 	}
-
 };

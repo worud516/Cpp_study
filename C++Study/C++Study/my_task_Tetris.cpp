@@ -6,50 +6,39 @@
 
 // clock 타임 : 프로그램이 시작된 시간.
 
+
 int main() {
 
 	float prev = (float)clock() / CLOCKS_PER_SEC;
-
-	Display* display = new Display;
-	GameEngine* gameengine = new GameEngine();
-
-
+	Display* display = new Display();
+	GameEngine* gameEngine = new GameEngine();      ///1
 	showConsoleCursor(false);
-
 
 	while (true) {
 		float curr = (float)clock() / CLOCKS_PER_SEC;
 		float dt = curr - prev;
 
-		if (dt < INTERVAL) continue;
+		if (dt < INTERVAL)   continue;
 		prev = curr;
 
-		// printf("%.3f\n", curr);
-
+		//printf("%.3f\n", curr);
 
 		bool left = keyState('a');
 		if (left) {
-			// 왼쪽으로 블록 이동
+			//왼쪽으로 블록 이동
 		}
 		else {
 			// 그냥 블록 떨어지게
 		}
 
-		gameengine->next(dt, 0);
+		gameEngine->next(dt, 0);            ///3
 
-
-		// 화면 출력
-		gameengine->makeDisplayData();
+		//화면 출력
+		gameEngine->makeDisplayData();   /////2
 		display->draw();
-		
-		// 게임상태 판별
 
-
-
-		// bool right = keyState('d');
+		//게임 상태 판별
 	}
-
-
 
 	return 0;
 }

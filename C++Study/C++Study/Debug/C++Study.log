@@ -1,2 +1,3 @@
-﻿  my_study_0429_virtualFunction.cpp
+﻿  my_task_Tetris.cpp
+D:\C++\C++Study\C++Study\my_task_Tetris_2.h(199,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   C++Study.vcxproj -> D:\C++\C++Study\Debug\C++Study.exe

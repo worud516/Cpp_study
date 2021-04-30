@@ -24,14 +24,25 @@ int main() {
 		//printf("%.3f\n", curr);
 
 		bool left = keyState('a');
+		bool right = keyState('d');
+		bool down = keyState('s');
 		if (left) {
 			//왼쪽으로 블록 이동
+			gameEngine->next(dt, 'a');
+		}
+		else if (right) {
+			//오른쪽으로 블록 이동
+			gameEngine->next(dt, 'd');
+		}
+		else if (down) {
+			//빨리 떨어지게
+			gameEngine->next(dt, 's');
 		}
 		else {
 			// 그냥 블록 떨어지게
+			gameEngine->next(dt, 0);            ///3
 		}
 
-		gameEngine->next(dt, 0);            ///3
 
 		//화면 출력
 		gameEngine->makeDisplayData();   /////2

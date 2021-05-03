@@ -32,6 +32,13 @@ public:
 
 class GameEngine {
 public:
+	enum class GameState {
+		PLAYING,GAMEOVER
+	};
+
+	GameState state = GameState::PLAYING;
+
+
 	int gameGridData[GRID_HEIGHT][GRID_WIDTH] = {
 		{0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0},
@@ -44,11 +51,7 @@ public:
 		{0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0},
 	};
-	int userBlock[USERBLOCK_SIZE][USERBLOCK_SIZE] = {
-		{1, 1, 1},
-		{0, 0, 1},
-		{0, 0, 0}
-	};
+	int userBlock[USERBLOCK_SIZE][USERBLOCK_SIZE] = { 0, };
 
 
 	int userBlockVarious[3][USERBLOCK_SIZE][USERBLOCK_SIZE] = {
@@ -78,9 +81,15 @@ public:
 
 	void init() {
 		//최초에 게임 엔진을 초기화 하는 과정을 맡는다.
+		makeUserBlock();
 	}
 	void next(float dt, char keyboardInput) {
 		//blockY++;
+
+		if (state == GameState::GAMEOVER) {
+			return;
+		}
+
 		elapsed = elapsed + dt;      //elapsed += dt; 
 		if (elapsed >= 0.5f) {
 			if (canGoDown()) {
@@ -88,6 +97,7 @@ public:
 			}
 			else {// 더 내려갈수 없으면 userBlock을 gameGridData에 전사
 				trans();
+				if (gameOverDecision()) state = GameState::GAMEOVER;
 			}
 			elapsed = elapsed - 0.5f;   //elapsed -= dt; 
 		}
@@ -190,13 +200,24 @@ public:
 		makeUserBlock();
 	}
 
+	bool gameOverDecision() {
+		for (int i = 0; i < USERBLOCK_SIZE; i++) {
+			for (int k = 0; k < USERBLOCK_SIZE; k++) {
+				if (userBlock[i][k] == 1 && gameGridData[i + blockY][k + blockX] == 1) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 
 	void makeUserBlock() {
 		blockX = GRID_WIDTH / 2 - USERBLOCK_SIZE / 2;
 		blockY = 0;
 
 		// 랜덤을 통해서 새로운 블록을 만든다.
-		srand(time(0));
+		//srand(time(0));
 
 		int various = rand() % 3;
 		for (int i = 0; i < USERBLOCK_SIZE; i++) {
@@ -204,10 +225,12 @@ public:
 				userBlock[i][k] = userBlockVarious[various][i][k];
 			}
 		}
-
-
 	}
 
+
+	void rotate() {
+		//todo : 회전 구현
+	}
 
 	//실제 게임 데이터를 화면에 출력할 수 있는 데이터로 바꿔주는 함수
 	void makeDisplayData() {

@@ -108,6 +108,15 @@
     <ClCompile Include="my_study_0503_cppGrammar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="academy_review_0504_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_review_0504_Animal_cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_review_0504_Person_cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="academy_review_0414_Header.h">
@@ -123,6 +132,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="my_task_Tetris_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="academy_review_0504_main_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="academy_review_0504_Animal_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="academy_review_0504_Person_header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

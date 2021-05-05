@@ -1,8 +1,6 @@
-#include <cstdio>
 #include <iostream>
+#include <string>
 using namespace std;
-
-
 
 
 // main 함수의 3종류 타입
@@ -29,8 +27,8 @@ int main() {
 	// endl( end of line) == \n
 	// std::cout  표준 출력변수 타입은 ostream
 
-	std::cout << "Hello World!" << std::endl;	
-	std::cout << "Hello" << "World!" << std::endl;
+	// std::cout << "Hello World!" << std::endl;	
+	// std::cout << "Hello" << "World!" << std::endl;
 		
 	// std::cin 표준 입력번수 타입은 istream
 	// 사용법
@@ -43,6 +41,20 @@ int main() {
 	// std::cerr << "에러발생" << std::endl;
 	
 
+	int num1, num2;
+
+	cout << "Enjoy Cpp.\n";
+	// 엔터나 공백을 이용해서 구분
+	cin >> num1 >> num2;
+
+	cout << "입력값 : " << num1 << " " << num2 << "입니다.\n";
+
+	string name;
+	name = "홍길동";
+	
+	string msg = "하이, " + name + "!";
+
+	cout << msg << endl;
 
 	return 0;
 }

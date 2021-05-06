@@ -120,6 +120,15 @@
     <ClCompile Include="my_study_0505_namespace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="academy_review_0504_House_cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_review_0506_bitwise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="academy_review_0506_PureVirtualFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="academy_review_0414_Header.h">
@@ -144,6 +153,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="academy_review_0504_Person_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="academy_review_0504_House_header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
